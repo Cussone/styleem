@@ -1,0 +1,23 @@
+.inp {
+  &__wrap {
+    display: inline-flex;
+  }
+  &__input {
+    @extend .inp-global;
+    &:hover {
+      @extend .color\:lgt\:black\:30;
+      @extend .border-color\:lgt\:black\:30;
+      &::placeholder {
+        @extend .color\:lgt\:black\:30;
+      }
+    }
+    &:focus, &:hover:focus {
+      outline: none;
+      @extend .border-color\:lgt\:black\:20;
+      @extend .color\:lgt\:black\:20;
+      &::placeholder {
+        @extend .color\:lgt\:black\:20;
+      }
+    }
+  }
+}

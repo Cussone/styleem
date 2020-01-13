@@ -1,0 +1,4 @@
+@include createFontScale(goldenSection, $base-font-size);
+@include createColorScale(black, "border-color");
+@include createColorScale(black, "background");
+@include createColorScale(black, "color");

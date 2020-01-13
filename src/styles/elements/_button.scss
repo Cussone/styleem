@@ -1,0 +1,30 @@
+.btn {
+  @extend .fw\:700;
+  @extend .color\:lgt\:black\:40;
+  @extend .inp-global;
+  text: {
+    decoration: none;
+    align: center;
+    transform: uppercase;
+  }
+  word-break: keep-all;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    @extend .color\:lgt\:black\:30;
+    @extend .border-color\:lgt\:black\:30;
+  }
+  &:active, &:hover:active {
+    @extend .color\:black;
+    @extend .border-color\:black;
+  }
+  &:focus, &:hover:focus  {
+    outline: none;
+    @extend .border-color\:lgt\:black\:20;
+    @extend .color\:lgt\:black\:20;
+  }
+}
+
+

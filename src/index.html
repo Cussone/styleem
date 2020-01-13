@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="<%= htmlWebpackPlugin.files.chunks.main.css %>"
+    />
+
+    <link
+      rel=“preload”
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+      as="stylesheet"
+    />
+
+    <link rel="stylesheet" href="//basehold.it/16" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <style>
+      /*body {*/
+      /*  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAAQCAYAAAD3Y2ILAAADHnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarZVrct0gDIX/s4ouAUkIwXIwj5nuoMvvAWMnvu1k0qQwBiwkIfSB7fqvn8P9QCHm4IJaijlGjxJyyFwwSP4sZbXkw2pXwZRt6UPudu89QyToZRvELe+QM/R5y+vZU4Fc3znKfU8cz4myHXHaC9C94CpC5wJ+O3ZlOxLeK4fz/Ti35WNO9n4LdeuPPb/SgMfNJohx1EgW0Ab2ZjFjnNgHQ97aDJTrdrUdvr67S5URE3ch8WjjjFAQvmQpaBmtyNKBtGy5CJ+OQIvdZED5yuvH5aPI3RX6Rv5Aeo9eUF8Jf0/arYReKvJCKN79X+Wkb3K3HVzr8/uVY9wjfsr1uC1ucu7CN0ZLY/RzdyVEbDnuTV1bXCPoHTNbyyqiGh71aSZ71oyacCUqzlHDITtQK2ViYBwUqFGhQX31lSpCDNzZ0DNXFqoOwgQYmevCHWalwQbATRJwVxwHgZTvWGgtm9dylRIWbpQcTg/B2Twr36ruM0pjzAtFtPLJK1eIi+chQBSTHJHzBDUQobGTqivBV30tk6uAoK40J2yw+GN6AP5D6e1wyQItUFT05wUma9sBUoQIFMGQgICPJEqRvDE7I0IiEwAVhM4S+AAWUuWGIDmIRMDBLcDasDFaqqx8ivEhBAiV6MTABlcQsEJQnB8LCWeoqGhQ1aimSbOWKHHesBgtzi9qMbFgatHMkmUrLkkKSVNMllLKqWTOgi+uZtzHnHLOpWDRAs8F1gUKpRx8yBEOPeJhRzryUSq7KjVUrbFaTTXX0rhJwz1usVlLLbfSqeMo9dC1x2499dzLwFEbMsLQEYeNNLIb5aa2sf5R/4EabWq8SE1Fu6lBana5oPk50ckMxDgQgNskQOKYJzOfKASe5CYznxm3QhlB6oTTaBIDwdCJddDN7o2cOon/h5sDCP4f5NxE9wlyf3L7G7VW1o9OFqF5DWdSveD2DSSoQwHqtac59H6/FPw6/ZvE7fnX2U+YPi3d102flu7rpk9L93XTp6X7uunT0n0nwXNSBl7xy3e/AeETVlcpVdb6AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wweExMoYwj6YAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVHja7dlBEQAgDMCwgX/PQwe9REK/Pbu7AwAAAAAAAMD3rgQAAAAAAAAADQYwAAAAAAAAQIQBDAAAAAAAABBhAAMAAAAAAABEGMAAAAAAAAAAEQYwAAAAAAAAQIQBDAAAAAAAABBhAAMAAAAAAABEGMAAAAAAAAAAEQYwAAAAAAAAQIQBDAAAAAAAABBhAAMAAAAAAABEGMAAAAAAAAAAEQYwAAAAAAAAQMSZmZUBAAAAAAAA4H8Py4YFGsX3YDsAAAAASUVORK5CYII=);*/
+      /*}*/
+    </style>
+
+    <h1 class="fsz:xxxl">Lorem ipsum dolor</h1>
+    <h2 class="fsz:xxl">Lorem ipsum dolor</h2>
+    <h3 class="fsz:xl">Lorem ipsum dolor sit amet</h3>
+    <h4 class="fsz:l td:u">Lorem ipsum dolor sit amet</h4>
+    <h5 class="fsz:r">Lorem ipsum dolor sit amet</h5>
+    <h6 class="fsz:s">Lorem ipsum dolor sit amet</h6>
+
+    <p class="fsz:r txt:mw">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci
+      beatae consectetur consequuntur doloribus, enim harum illo minima minus
+      modi natus possimus praesentium quos recusandae repellendus reprehenderit
+      similique voluptas voluptatibus. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. A adipisci beatae consectetur consequuntur doloribus,
+      enim harum illo minima minus modi natus possimus praesentium quos
+      recusandae repellendus reprehenderit similique voluptas voluptatibus.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci
+      beatae consectetur consequuntur doloribus, enim harum illo minima minus
+      modi natus possimus praesentium quos recusandae repellendus reprehenderit
+      similique voluptas voluptatibus. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit.
+      <span class="fw:700">A adipisci beatae consectetur</span> consequuntur
+      doloribus, enim harum illo minima minus <a href="/test.html">modi natus possimus praesentium</a>
+      quos recusandae repellendus reprehenderit similique voluptas voluptatibus.
+    </p>
+
+    <p class="fsz:xl fw:100 fsy:i">Lorem ipsum dolor sit amet</p>
+    <p class="fsz:xl fw:300 fsy:i">Lorem ipsum dolor sit amet</p>
+    <p class="fsz:xl fw:400 fsy:i">Lorem ipsum dolor sit amet</p>
+    <p class="fsz:xl fw:500 fsy:i">Lorem ipsum dolor sit amet</p>
+    <p class="fsz:xl fw:700 fsy:i">Lorem ipsum dolor sit amet</p>
+    <p class="fsz:xl fw:900 fsy:i">Lorem ipsum dolor sit amet</p>
+
+    <div>
+      <button class="btn">Button Button</button>
+      <a class="btn" href="/#" tabindex="0">Button Anchor</a>
+      <span class="btn" tabindex="0">Button Span</span>
+    </div>
+
+    <div
+      style="display: flex; flex-direction: column; align-items: flex-start;"
+    >
+      <button class="btn sz:s">Submit now</button>
+      <button class="btn sz:r">Submit now</button>
+      <button class="btn sz:l">Submit now</button>
+      <button class="btn sz:xl">Submit now</button>
+
+      <div class="inp__wrapper">
+        <input class="inp__input sz:s" placeholder="Enter here" />
+      </div>
+      <div class="inp__wrap">
+        <input class="inp__input sz:r" placeholder="Enter here" />
+      </div>
+      <div class="inp__wrap">
+        <input class="inp__input sz:l" placeholder="Enter here" />
+      </div>
+      <div class="inp__wrap">
+        <input class="inp__input sz:xl" placeholder="Enter here" />
+      </div>
+    </div>
+
+    <form action="javascript:void(0)">
+      <div class="inp__wrap">
+        <input class="inp__input sz:r" placeholder="Enter here" />
+      </div>
+      <button class="btn sz:r">Submit now</button>
+    </form>
+
+    <div style="display: flex">
+      <div class="lgt:black:10"></div>
+      <div class="lgt:black:20"></div>
+      <div class="lgt:black:30"></div>
+      <div class="lgt:black:40"></div>
+      <div class="lgt:black:50"></div>
+      <div class="lgt:black:60"></div>
+      <div class="lgt:black:70"></div>
+      <div class="lgt:black:80"></div>
+      <div class="lgt:black:90"></div>
+      <div class="lgt:black:100"></div>
+    </div>
+
+    <div style="display: flex">
+      <div class="lgt:red:10"></div>
+      <div class="lgt:red:20"></div>
+      <div class="lgt:red:30"></div>
+      <div class="lgt:red:40"></div>
+    </div>
+
+    <div style="display: flex">
+      <div class="drk:red:10"></div>
+      <div class="drk:red:20"></div>
+      <div class="drk:red:30"></div>
+      <div class="drk:red:40"></div>
+    </div>
+
+    <link
+      rel="preload"
+      href="<%= htmlWebpackPlugin.files.chunks.main.entry %>"
+      as="script"
+    />
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  </body>
+</html>

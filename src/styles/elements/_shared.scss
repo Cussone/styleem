@@ -1,0 +1,21 @@
+.inp-global {
+  @extend .border-color\:lgt\:black\:40;
+  @extend .color\:lgt\:black\:40;
+  display: inline-flex;
+  vertical-align: top;
+  letter-spacing: 0.01rem;
+  border: {
+    width: $border-width;
+    style: solid;
+    radius: 0.3rem;
+  }
+  background: linear-gradient(180deg, #ffffff 75%, #eeeeee 100%);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.06);
+  transition: $main-transition;
+  line-height: calc(3rem - #{$border-factor}px);
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 0 2rem;
+
+  @include createInputScale(goldenSection, $border-width, $border-factor)
+}

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+
+  padding: 4rem 1rem;
+
+  background-size: cover;
+  &:after {
+    z-index: -1 !important;
+  }
+}

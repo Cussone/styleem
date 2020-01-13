@@ -1,0 +1,22 @@
+@each $weight in map-keys($font-weight-scales) {
+  $value: map-get($font-weight-scales, $weight);
+  .fw\:#{$value} {
+    font-weight: $value;
+  }
+}
+
+.fsy\:i {
+  font-style: italic;
+}
+
+.td\:u {
+  text-decoration: underline;
+}
+
+.txt\:mw {
+  max-width: 35rem;
+}
+
+a {
+  color: $font-color;
+}

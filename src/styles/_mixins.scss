@@ -1,0 +1,103 @@
+// @todo - Find a way to handle browser incompatibility for margin-block-*
+//         https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-start
+// - could be a param passed to the mixin
+@mixin createFontScale($factor, $base-size) {
+  @if unit($base-size) != '%' {
+    @error "Base size must be provided in percentage, got `#{$base-size}` instead.";
+  }
+  @if map-has-key($scale-factors, $factor) {
+    $factorValue: map-get($scale-factors, $factor);
+    html {
+      font-size: $base-size;
+    }
+    @each $scale in map-keys($size-scales) {
+      $sc: map-get($size-scales, $scale);
+      .fsz\:#{$scale} {
+        @if $sc > 0 {
+          $fontSize: $sc * $factorValue;
+          font-size: $fontSize * 1rem;
+          line-height: #{ceil($fontSize)}rem;
+        } @else if $sc == 0 {
+          font-size: 1rem;
+          line-height: 2rem;
+        } @else {
+          $value: $sc / $factorValue;
+          font-size: abs(($value * 1rem));
+          line-height: 1rem;
+        }
+        @if $sc >= 3 {
+          margin-top: 1rem;
+          margin-bottom: #{$sc - 1}rem;
+        } @else {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  } @else {
+    @error "Unfortunately, no value could be retrieved from `#{$factor}`. "
+        + "Please make sure it is defined in `$scale-factors` map.";
+  }
+}
+
+// @todo - Find a way to handle browser incompatibility for margin-block-*
+//         https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-start
+// - could be a param passed to the mixin
+// @todo $border-factor can be 0 as well, handle that
+@mixin createInputScale($factor, $border-width, $border-factor) {
+  @if map-has-key($scale-factors, $factor) {
+    $factorValue: map-get($scale-factors, $factor);
+    @each $scale in map-keys($size-scales) {
+      $sc: map-get($size-scales, $scale);
+      &.sz\:#{$scale} {
+        @if $sc > 0 {
+          $fontSize: $sc * $factorValue;
+          font-size: $fontSize * 1rem;
+          margin-top: #{$sc}rem;
+          margin-bottom: #{$sc}rem;
+          line-height: calc(#{$sc * 4rem} - #{$border-width * $border-factor});
+        } @else if $sc == 0 {
+          font-size: 1rem;
+          line-height: calc(3rem - #{$border-width * $border-factor});
+        } @else {
+          $value: $sc / $factorValue;
+          font-size: abs(($value * 1rem));
+          line-height: calc(2rem - #{$border-width * $border-factor});
+        }
+        padding: 0 #{$sc + 2}rem;
+      }
+    }
+  } @else {
+    @error "Unfortunately, no value could be retrieved from `#{$factor}`. "
+        + "Please make sure it is defined in `$scale-factors` map.";
+  }
+}
+
+@mixin size($width, $height: null) {
+  @if $height != null {
+    width: $width;
+    height: $height;
+  } @else {
+    width: $width;
+    height: $width;
+  }
+}
+
+@mixin createColorScale($color: black, $prop: "background", $times: 10,  $mode: "lighten") {
+    .#{$prop}\:#{$color} {
+      #{$prop}: $color;
+    }
+    @for $i from 1 through $times {
+    @if ($mode == "lighten") {
+      .#{$prop}\:lgt\:#{$color}\:#{$i}0 {
+        #{$prop}: lighten($color, $i * 10);
+      }
+    } @else if ($mode == "darken") {
+      .#{$prop}\:drk\:#{$color}\:#{$i}0 {
+        #{$prop}: lighten($color, $i * 10);
+      }
+    }
+  }
+}
+
+
