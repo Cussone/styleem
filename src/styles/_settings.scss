@@ -3,8 +3,10 @@
 
 @include createColorScale(black, 'border-color');
 @include createColorScale(black, 'background');
-@include createColorScale(white, 'background');
+@include createColorScale(white, 'background', 'darken');
 @include createColorScale(red, 'background');
 @include createColorScale(red, 'background', 'darken');
+@include createColorScale(yellow, 'background');
+@include createColorScale(yellow, 'background', 'darken');
 @include createColorScale(black, 'color');
 @include createColorScale(white, 'color');

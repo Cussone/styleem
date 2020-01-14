@@ -72,8 +72,6 @@
   }
 }
 
-
-
 @mixin size($width, $height: null) {
   @if $height != null {
     width: $width;
@@ -88,7 +86,6 @@
   $color: black,
   $prop: 'background',
   $mode: 'lighten',
-  $times: 10
 ) {
   $class: 'bg';
   @if ($prop == 'background') {
@@ -100,6 +97,10 @@
   } @else if ($prop == 'border-color') {
     $class: 'bc';
   }
+  $times: 10;
+  @if ($color != 'black' or $color != 'white') {
+    $times: 4;
+  }
   .#{$class}\:#{$color} {
     #{$prop}: $color;
   }
@@ -110,7 +111,7 @@
       }
     } @else if ($mode == 'darken') {
       .#{$class}\:drk\:#{$color}\:#{$i}0 {
-        #{$prop}: lighten($color, $i * 10);
+        #{$prop}: darken($color, $i * 10);
       }
     }
   }
