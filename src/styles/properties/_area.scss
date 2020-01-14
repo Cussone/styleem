@@ -1,0 +1,119 @@
+// Margin area
+@for $i from 0 through 10 {
+  .m\:#{$i}a {
+    margin: #{$i}rem auto;
+  }
+  .m\:#{$i} {
+    margin: #{$i}rem;
+  }
+  .mt\:#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .mb\:#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .ml\:#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .mr\:#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+// Margin area negative
+@for $i from 0 through 10 {
+  .m\:#{$i}-a {
+    margin: #{$i}rem auto;
+  }
+  .m\:-#{$i} {
+    margin: -#{$i}rem;
+  }
+  .mt\:-#{$i} {
+    margin-top: -#{$i}rem;
+  }
+  .mb\:-#{$i} {
+    margin-bottom: -#{$i}rem;
+  }
+  .ml\:-#{$i} {
+    margin-left: -#{$i}rem;
+  }
+  .mr\:-#{$i} {
+    margin-right: -#{$i}rem;
+  }
+}
+
+// Padding area
+@for $i from 0 through 10 {
+  .p\:#{$i} {
+    padding: #{$i}rem;
+  }
+  .pt\:#{$i} {
+    padding-top: #{$i}rem;
+  }
+  .pb\:#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+  .pl\:#{$i} {
+    padding-left: #{$i}rem;
+  }
+  .pr\:#{$i} {
+    padding-right: #{$i}rem;
+  }
+}
+
+// Content area
+// Height
+@for $i from 0 through 100 {
+  .h\:#{$i}r {
+    height: #{$i}rem;
+  }
+  .h\:#{$i}p {
+    height: #{$i * 1%};
+  }
+}
+// Max height
+@for $i from 0 through 100 {
+  .mxh\:#{$i}r {
+    max-height: #{$i}rem;
+  }
+  .mxh\:#{$i}p {
+    max-height: #{$i * 1%};
+  }
+}
+// Min height
+@for $i from 0 through 100 {
+  .mih\:#{$i}r {
+    min-height: #{$i}rem;
+  }
+  .mih\:#{$i}p {
+    min-height: #{$i * 1%};
+  }
+}
+
+// Width
+@for $i from 0 through 100 {
+  .w\:#{$i}r {
+    width: #{$i}rem;
+  }
+  .w\:#{$i}p {
+    width: #{$i * 1%};
+  }
+}
+// Max width
+@for $i from 0 through 100 {
+  .mxw\:#{$i}r {
+    max-width: #{$i}rem;
+  }
+  .mxw\:#{$i}p {
+    max-width: #{$i * 1%};
+  }
+}
+// Min width
+@for $i from 0 through 100 {
+  .miw\:#{$i}r {
+    min-width: #{$i}rem;
+  }
+  .miw\:#{$i}p {
+    min-width: #{$i * 1%};
+  }
+}

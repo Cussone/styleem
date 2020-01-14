@@ -1,0 +1,123 @@
+// Position
+.p\:a {
+  position: absolute;
+}
+.p\:r {
+  position: relative;
+}
+.p\:f {
+  position: fixed;
+}
+
+// Top position
+@for $i from 0 through 10 {
+  .t\:#{$i} {
+    top: #{$i}rem;
+  }
+}
+@for $i from 0 through 10 {
+  .t\:-#{$i} {
+    top: -#{$i}rem;
+  }
+}
+.t\:50 {
+  top: 50%;
+}
+.t\:100 {
+  top: 100%;
+}
+.t\:-50 {
+  top: -50%;
+}
+.t\:-100 {
+  top: -100%;
+}
+
+
+// Bottom position
+@for $i from 0 through 10 {
+  .b\:#{$i} {
+    bottom: #{$i}rem;
+  }
+}
+@for $i from 0 through 10 {
+  .b\:-#{$i} {
+    bottom: -#{$i}rem;
+  }
+}
+.b\:50 {
+  bottom: 50%;
+}
+.b\:100 {
+  bottom: 100%;
+}
+.b\:-50 {
+  bottom: -50%;
+}
+.b\:-100 {
+  bottom: -100%;
+}
+
+// Left position
+@for $i from 0 through 10 {
+  .l\:#{$i} {
+    left: #{$i}rem;
+  }
+}
+@for $i from 0 through 10 {
+  .l\:-#{$i} {
+    left: -#{$i}rem;
+  }
+}
+.l\:50 {
+  left: 50%;
+}
+.l\:100 {
+  left: 100%;
+}
+.l\:-50 {
+  left: -50%;
+}
+.l\:-100 {
+  left: -100%;
+}
+
+// Right position
+@for $i from 0 through 10 {
+  .r\:#{$i} {
+    right: #{$i}rem;
+  }
+}
+@for $i from 0 through 10 {
+  .r\:-#{$i} {
+    right: -#{$i}rem;
+  }
+}
+.r\:50 {
+  right: 50%;
+}
+.r\:100 {
+  right: 100%;
+}
+.r\:-50 {
+  right: -50%;
+}
+.r\:-100 {
+  right: -100%;
+}
+
+// Z index
+@for $i from 0 through 10 {
+  @if ($i == 0) {
+    .z\:#{$i} {
+      z-index: #{$i};
+    }
+  } @else {
+    .z\:#{$i}0 {
+      z-index: #{$i}0;
+    }
+  }
+}
+.z\:-1 {
+  z-index: -1;
+}

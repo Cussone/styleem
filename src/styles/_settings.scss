@@ -1,4 +1,10 @@
+// Default settings
 @include createFontScale(goldenSection, $base-font-size);
-@include createColorScale(black, "border-color");
-@include createColorScale(black, "background");
-@include createColorScale(black, "color");
+
+@include createColorScale(black, 'border-color');
+@include createColorScale(black, 'background');
+@include createColorScale(white, 'background');
+@include createColorScale(red, 'background');
+@include createColorScale(red, 'background', 'darken');
+@include createColorScale(black, 'color');
+@include createColorScale(white, 'color');

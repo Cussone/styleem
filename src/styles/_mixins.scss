@@ -25,11 +25,10 @@
           font-size: abs(($value * 1rem));
           line-height: 1rem;
         }
+        margin-top: 0;
         @if $sc >= 3 {
-          margin-top: 1rem;
           margin-bottom: #{$sc - 1}rem;
         } @else {
-          margin-top: 1rem;
           margin-bottom: 1rem;
         }
       }
@@ -53,8 +52,8 @@
         @if $sc > 0 {
           $fontSize: $sc * $factorValue;
           font-size: $fontSize * 1rem;
-          margin-top: #{$sc}rem;
-          margin-bottom: #{$sc}rem;
+          //margin-top: #{$sc}rem;
+          //margin-bottom: #{$sc}rem;
           line-height: calc(#{$sc * 4rem} - #{$border-width * $border-factor});
         } @else if $sc == 0 {
           font-size: 1rem;
@@ -73,6 +72,8 @@
   }
 }
 
+
+
 @mixin size($width, $height: null) {
   @if $height != null {
     width: $width;
@@ -83,21 +84,34 @@
   }
 }
 
-@mixin createColorScale($color: black, $prop: "background", $times: 10,  $mode: "lighten") {
-    .#{$prop}\:#{$color} {
-      #{$prop}: $color;
-    }
-    @for $i from 1 through $times {
-    @if ($mode == "lighten") {
-      .#{$prop}\:lgt\:#{$color}\:#{$i}0 {
+@mixin createColorScale(
+  $color: black,
+  $prop: 'background',
+  $mode: 'lighten',
+  $times: 10
+) {
+  $class: 'bg';
+  @if ($prop == 'background') {
+    $class: 'bg';
+  } @else if ($prop == 'background-color') {
+    $class: 'bgc';
+  } @else if ($prop == 'color') {
+    $class: 'co';
+  } @else if ($prop == 'border-color') {
+    $class: 'bc';
+  }
+  .#{$class}\:#{$color} {
+    #{$prop}: $color;
+  }
+  @for $i from 1 through $times {
+    @if ($mode == 'lighten') {
+      .#{$class}\:lgt\:#{$color}\:#{$i}0 {
         #{$prop}: lighten($color, $i * 10);
       }
-    } @else if ($mode == "darken") {
-      .#{$prop}\:drk\:#{$color}\:#{$i}0 {
+    } @else if ($mode == 'darken') {
+      .#{$class}\:drk\:#{$color}\:#{$i}0 {
         #{$prop}: lighten($color, $i * 10);
       }
     }
   }
 }
-
-

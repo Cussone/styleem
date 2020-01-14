@@ -1,6 +1,6 @@
 .inp-global {
-  @extend .border-color\:lgt\:black\:40;
-  @extend .color\:lgt\:black\:40;
+  @extend .bc\:lgt\:black\:40;
+  @extend .co\:lgt\:black\:40;
   display: inline-flex;
   vertical-align: top;
   letter-spacing: 0.01rem;
@@ -14,7 +14,7 @@
   transition: $main-transition;
   line-height: calc(3rem - #{$border-factor}px);
   font-size: 1rem;
-  margin: 1rem 0;
+  //margin: 1rem 0;
   padding: 0 2rem;
 
   @include createInputScale(goldenSection, $border-width, $border-factor)

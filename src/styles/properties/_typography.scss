@@ -1,3 +1,7 @@
+a {
+  color: $font-color;
+}
+
 @each $weight in map-keys($font-weight-scales) {
   $value: map-get($font-weight-scales, $weight);
   .fw\:#{$value} {
@@ -13,10 +17,18 @@
   text-decoration: underline;
 }
 
-.txt\:mw {
-  max-width: 35rem;
+.td\:n {
+  text-decoration: none;
 }
 
-a {
-  color: $font-color;
+.ta\:c {
+  text-align: center;
+}
+
+.ta\:l {
+  text-align: left;
+}
+
+.ta\:r {
+  text-align: right;
 }
