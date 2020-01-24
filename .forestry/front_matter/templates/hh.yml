@@ -1,4 +1,14 @@
 ---
 label: hh
 hide_body: false
-fields: []
+fields:
+- name: lalakey
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Lala
+- name: aa
+  type: boolean
+  label: aa
