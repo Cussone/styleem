@@ -4,12 +4,14 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Alala
 - type: directory
   path: src
   label: Lala
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
