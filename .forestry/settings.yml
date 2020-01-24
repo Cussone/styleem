@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src
   label: lalalaaaa
-  match: "**/*"
 - type: heading
   label: Alala
 - type: directory
